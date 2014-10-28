@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+		xmlns:gap   = "http://phonegap.com/ns/1.0"
+		id          = "com.hkfoodtravel.m"
+		versionCode = "10" 
+		version     = "1.0" >	
+	<name>香港美食旅遊。敗家手記 by Jonathan Sin</name>
+	<description>關於
+香港美食旅遊資料庫 http://hkfoodtravel.com/ | 由香港人分享香港的美食, 旅遊, 玩樂最新資訊，也包括購物,景點,酒店等優惠，更有Jonathan個人敗家生活碎碎念。
+
+使命
+成為資訊豐富的香港本地旅遊網站之一，相關資訊，包括: 吃喝、玩樂、美食、景點、購物、酒店、飯店。
+
+簡介
+香港美食旅遊資料庫 http://hkfoodtravel.com/ | 由香港人分享香港的美食, 旅遊, 玩樂最新資訊，也包括購物,景點,酒店等優惠，更有Jonathan個人敗家生活碎碎念。
+有關活動邀約、採訪、合作提案請找 余小姐洽談 celia.yu@webscrew.com，謝謝。
+ </description>
+	<author href="http://hkfoodtravel.com" email="alankwok@yahoo.com">hkfoodtravel.com</author>
+	<preference name="permissions" value="none" />
+	<icon src="icons/apple-touch-icon-57-precomposed.png" gap:platform="ios" width="57" height="57" />
+	<icon src="icons/apple-touch-icon-72-precomposed.png" gap:platform="ios" width="72" height="72" />
+	<icon src="icons/apple-touch-icon-114-precomposed.png" gap:platform="ios" width="114" height="114" />		
+	<icon src="icons/apple-touch-icon-144-precomposed.png" gap:platform="ios" width="144" height="144" />	
+	<icon src="icons/android-ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="icons/android-mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="icons/android-hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="icons/android-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	<icon src="icons/winphone-icon.png" gap:platform="winphone" />
+	<icon src="icons/winphone-tileicon.png" gap:platform="winphone" gap:role="background" />	
+	<gap:splash src="icons/ios-splash-320x480.png" gap:platform="ios" width="320" height="480" />
+	<gap:splash src="icons/ios-splash-640x960.png" gap:platform="ios" width="640" height="960" />
+	<gap:splash src="icons/ios-splash-640x1136.png" gap:platform="ios" width="640" height="1136" />
+	<gap:splash src="icons/ios-splash-1024x748.png" gap:platform="ios" width="1024" height="748" />
+	<gap:splash src="icons/ios-splash-768x1004.png" gap:platform="ios" width="768" height="1004" />	
+	<gap:splash src="icons/ios-splash-2048x4796.png" gap:platform="ios" width="2048" height="1496" />
+	<gap:splash src="icons/ios-splash-1536x2008.png" gap:platform="ios" width="1536" height="2008" />
+	<gap:splash src="icons/android-splash-ldpi.jpg" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="icons/android-splash-mdpi.jpg" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="icons/android-splash-hdpi.jpg" gap:platform="android" gap:density="hdpi" />
+	<gap:splash src="icons/android-splash-xhdpi.jpg" gap:platform="android" gap:density="xhdpi" />
+	<gap:splash src="icons/winphone-splash.png" gap:platform="winphone" />	
+</widget>
+
+

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="cache-control" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<script>
+var back = '#';
+function processLink() {
+  $("#page a[href*='http://']").live('click', function(e) {
+    $('#back').removeClass('ui-btn-active').blur();
+    e.preventDefault();
+    $(this).blur();
+    var url = $(this).attr('href');
+    getData(url);
+  });
+}
+function jsonpCallback(data) {
+  $('#back').removeClass('ui-btn-active').blur();
+  $('#title').html(data.title);
+  $('#panel').html(data.panel);
+  $('#content').html(data.content);
+  $('#back').attr('href', back);
+  $('#page').trigger('create');
+}
+function getData(url) {
+  $('#back').removeClass('ui-btn-active').blur();
+  $('#panel').panel('close');
+  $.mobile.loading('show');
+  $.ajax({
+    type: 'GET',
+    url: "http://m.hkfoodtravel.com/json?url="+url,
+    contentType: "application/json",
+    dataType: 'jsonp',
+    jsonp : "callback",
+    jsonpCallback: 'jsonpCallback',
+    success: function(data) {
+      $.mobile.loading('hide');
+      back = url;
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+      $.mobile.loading('hide');
+      alert("Error: " + xhr.status + "\n" +
+        "Message: " + xhr.statusText + "\n" +
+        "Response: " + xhr.responseText + "\n" + thrownError);
+      },
+  });
+}
+$(document).on( "pageinit", "#page", function( e ) {
+  getData('http://m.hkfoodtravel.com/mobile');
+  processLink();
+});
+</script>
+</head>
+<body>
+  <div id="page" data-role="page">
+    <div data-animate="false" data-role="panel" id="panel" data-position="left" data-display="push"></div>
+    <div data-role="header" data-position="fixed" data-theme="a" style="border:0px;">
+      <a href="#panel" data-theme="a" data-icon="bars" data-inline="true" data-iconpos="notext" data-shadow="false" data-corners="false" data-iconshadow="false" class="ui-btn-left ui-icon-nodisc">Menu</a>
+      <h1 class="title" id='title'></h1>
+      <a id='back' href="#" data-theme="a" data-icon="back" data-inline="true" data-iconpos="notext" data-shadow="false" data-corners="false" data-iconshadow="false" class="ui-btn-right ui-icon-nodisc">Back</a>
+    </div>
+    <div data-role="content" id='content'></div>
+  </div>
+</body>
+</html>
