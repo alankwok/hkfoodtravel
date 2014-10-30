@@ -39,6 +39,7 @@
 	<gap:splash src="icons/android-splash-hdpi.jpg" gap:platform="android" gap:density="hdpi" />
 	<gap:splash src="icons/android-splash-xhdpi.jpg" gap:platform="android" gap:density="xhdpi" />
 	<gap:splash src="icons/winphone-splash.png" gap:platform="winphone" />	
+	<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.0" />	
 </widget>
 
 
