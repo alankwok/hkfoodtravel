@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css" />
 <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<script type="text/javascript" src="SocialSharing.js"></script>
 <script>
 var back = '#';
 function processLink() {
@@ -26,6 +27,7 @@ function jsonpCallback(data) {
   $('#content').html(data.content);
   $('#back').attr('href', back);
   $('#page').trigger('create');
+  $.mobile.silentScroll(0);
 }
 function getData(url) {
   $('#back').removeClass('ui-btn-active').blur();
